@@ -1,8 +1,11 @@
+require "rspec"
 require "spec_helper"
-require "zombie"
+require_relative "./gem2.rb"
+require "json_spec"
 
-describe Zombie do
-  #an example (test) goes here
-  it "is named Asher"
-
+describe GetRequest do
+  it "has value of the sample given in the challenge" do
+    getrequest = GetRequest.new
+    getrequest.data.should == '{"propensity":0.26532,"ranking":"C"}'
+  end
 end
